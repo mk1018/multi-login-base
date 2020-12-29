@@ -59,27 +59,8 @@ Route::namespace('App\Http\Controllers\Api')->group( function () {
         Route::apiResource('home', 'HomeController');
         Route::apiResource('user', 'UserController');
         Route::apiResource('admin', 'AdminController');
-        Route::apiResource('network', 'NetworkController');
-        Route::apiResource('deposit', 'DepositController');
-        Route::apiResource('withdrawal', 'WithdrawalController');
-        Route::apiResource('payment', 'PaymentController');
-        Route::apiResource('payment_type', 'PaymentTypeController');
-        Route::apiResource('asset_history', 'AssetHistoryController');
-        Route::apiResource('wallet', 'WalletController');
-        Route::apiResource('bonus', 'BonusController');
-        Route::apiResource('bonus_type', 'BonusTypeController');
-        Route::apiResource('chart', 'ChartController');
 
         // オリジナル
-        Route::GET('network/json/{id}', 'NetworkController@networkJson');
-        Route::GET('qr_code/{id}', 'UserController@qrCode');
-        Route::GET('deposit_user', 'DepositController@indexForUser');
-        Route::GET('withdrawal_user', 'WithdrawalController@indexForUser');
-        Route::GET('payment_user', 'PaymentController@indexForUser');
-        Route::GET('payment_type_enable', 'PaymentTypeController@indexForEnable');
-        Route::GET('asset_history_user', 'AssetHistoryController@indexForUser');
-        Route::GET('bonus_user', 'BonusController@indexForUser');
-        Route::GET('bonus_type_enable', 'BonusTypeController@indexForEnable');
     });
 
 });
